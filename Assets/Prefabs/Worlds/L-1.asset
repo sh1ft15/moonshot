@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1c97c7ed3825d4ebebe30a5766900a, type: 3}
+  m_Name: L-1
+  m_EditorClassIdentifier: 
+  worldName: Slugerrable
+  maxMobCount: 12
+  waves:
+  - {fileID: 11400000, guid: 9cb6758723958c44e907d308140dd20b, type: 2}
+  - {fileID: 11400000, guid: 3407cc0048b5b0043933ccd4349ae1c5, type: 2}
+  - {fileID: 11400000, guid: 417c4bb34961e824fb3f63cb4b8666d1, type: 2}
