@@ -24,18 +24,20 @@ public class ShieldColliderScript : MonoBehaviour
             case "SmallProjectile": 
             case "MediumProjectile": 
             case "BigEffect":
-                SmallProjectileScript script = col.GetComponent<SmallProjectileScript>();
-                Transform origin = script.GetOrigin(),
-                          curOrigin = shieldScript.GetOrigin();
+                if (col != null) {
+                    SmallProjectileScript script = col.GetComponent<SmallProjectileScript>();
+                    Transform origin = script.GetOrigin(),
+                            curOrigin = shieldScript.GetOrigin();
 
-                if (origin != null && curOrigin != null) {
-                    string tag = origin.parent.tag,
-                           curTag = curOrigin.parent.tag;
-                           
-                    if (origin != curOrigin && tag != curTag) {
-                        effectsScript.StartCoroutine(effectsScript.SpawnSmallEffect(
-                            "small_deflect", post, 1));
-                        Destroy(col.gameObject);
+                    if (origin != null && curOrigin != null) {
+                        string tag = origin.parent.tag,
+                            curTag = curOrigin.parent.tag;
+                            
+                        if (origin != curOrigin && tag != curTag) {
+                            effectsScript.StartCoroutine(effectsScript.SpawnSmallEffect(
+                                "small_deflect", post, 1));
+                            Destroy(col.gameObject);
+                        }
                     }
                 }
             break;
